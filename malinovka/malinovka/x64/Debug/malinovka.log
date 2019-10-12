@@ -1,0 +1,25 @@
+﻿  stdafx.cpp
+  Cheat.cpp
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(33): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(8): error C2065: 'LmoduleName': undeclared identifier
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(10): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(55): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(55): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(68): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(69): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(72): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(73): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(74): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(76): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(77): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.cpp(80): warning C4312: 'type cast': conversion from 'DWORD' to 'LPCVOID' of greater size
+  malinovka.cpp
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(33): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+  Math.cpp
+  MinerBot.cpp
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(33): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+c:\users\liefasm\source\repos\malinovka\malinovka\cheat.h(38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+  Player.cpp
+  Generating Code...
