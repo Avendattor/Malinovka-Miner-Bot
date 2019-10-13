@@ -5,7 +5,6 @@ Math::Math()
 {
 }
 
-
 Math::~Math()
 {
 }
