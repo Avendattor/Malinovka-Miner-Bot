@@ -56,8 +56,6 @@ DWORD Cheat::dwGetModuleBaseAddress(LPCSTR lpszModuleName)
 				break;
 			}
 		} while (Module32Next(hSnapshot, &ModuleEntry32));
-
-
 	}
 	CloseHandle(hSnapshot);
 	return dwModuleBaseAddress;
