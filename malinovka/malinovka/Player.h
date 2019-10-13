@@ -2,7 +2,6 @@
 
 class Player
 {
-
 public:
 	float posX;
 	float posY;
@@ -16,4 +15,3 @@ public:
 	Player();
 	~Player();
 };
-
