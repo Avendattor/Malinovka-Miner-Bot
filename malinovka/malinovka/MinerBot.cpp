@@ -27,8 +27,13 @@ void MinerBot::run()
 			v3[2] = player.posZ - 1002.f;
 
 			float dist = Math::dist(X, Y, Z, player.posX, player.posY, player.posZ);
-			std::cout << "Distantion: " << dist << std::endl;
-			std::cout << "Angle (atan2): " << atan2(v1[1], v1[0]) << std::endl;
+
+
+			if (player.moveSpeed == 0)
+			{
+				sendKey(static_cast<char>('w'));
+				sendKey(static_cast<UINT>(VK_SPACE));
+			}
 
 			if (status == 0)
 			{
@@ -52,13 +57,16 @@ void MinerBot::run()
 
 MinerBot::MinerBot() : Cheat()
 {
+	print();
+
 	while (true)
 	{
 		run();
-		print();
+		render();
+		//print();
 
-		Sleep(10);
-		system("cls");
+		Sleep(50); // Скорость обновления данных. Чем меньше число, тем чаще происходит обновление, тем больше ресурсов компьютера затрачивается.
+		//system("cls"); // Обновление консольного окна (лучше всего использовать в случае отладки в процессе вывода данных чита в консоль
 	}
 }
 

@@ -27,6 +27,10 @@ public:
 	void render();
 	void print();
 
+	void sendKey(char key);
+	void sendKey(UINT ch);
+	void debugLog();
+
 	inline void setVerticalCameraValue(float v) { WriteProcessMemory(hProcess, (LPVOID)(clientBase + 0x76F248), &v, sizeof(v), NULL); };
 	inline void setHorizontalCameraValue(float v) { WriteProcessMemory(hProcess, (LPVOID)(clientBase + 0x76F258), &v, sizeof(v), NULL); };
 
