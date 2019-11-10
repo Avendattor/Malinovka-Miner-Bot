@@ -26,4 +26,3 @@ public:
 	Math();
 	~Math();
 };
-

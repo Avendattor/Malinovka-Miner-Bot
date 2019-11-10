@@ -64,9 +64,6 @@ void Cheat::debugLog()
 	std::cout << "Camera information: " << std::endl;
 	std::cout << "Vertical value: " << player.vCamPosition << std::endl;
 	std::cout << "Horizontal value: " << player.hCamPosition << std::endl << std::endl;
-
-	//std::cout << "Distantion: " << dist << std::endl;
-	//std::cout << "Angle (atan2): " << atan2(v1[1], v1[0]) << std::endl;
 }
 
 Cheat::Cheat()
@@ -76,7 +73,7 @@ Cheat::Cheat()
 	std::cout << "BOT: You have 5 seconds to select a window the game" << std::endl;
 	//std::cout << "Client Base is: " << std::hex << clientBase << std::endl;
 	ReadProcessMemory(hProcess, (LPCVOID)(clientBase + 0x79B9BC), &baseAddress, sizeof(baseAddress), NULL);
-	std::cout << "Base Addy is: " << std::hex << baseAddress << std::endl;
+	//std::cout << "Base Addy is: " << std::hex << baseAddress << std::endl;
 	
 	if ((baseAddress) == 0)
 	{
@@ -89,6 +86,7 @@ Cheat::Cheat()
 	Sleep(5000);
 	system("cls");
 }
+
 bool Cheat::toAttach(LPCSTR process)
 {
 	hWnd = FindWindowA(0, process);
@@ -119,6 +117,7 @@ bool Cheat::toAttach(LPCSTR process)
 	}
 	return false;
 }
+
 DWORD Cheat::dwGetModuleBaseAddress(LPCSTR lpszModuleName)
 {
 	DWORD dwModuleBaseAddress = 0;
@@ -139,6 +138,7 @@ DWORD Cheat::dwGetModuleBaseAddress(LPCSTR lpszModuleName)
 	CloseHandle(hSnapshot);
 	return dwModuleBaseAddress;
 }
+
 void Cheat::render()
 {
 	DWORD p1;
@@ -155,11 +155,13 @@ void Cheat::render()
 
 	ReadProcessMemory(hProcess, (LPCVOID)(clientBase + 0x7729C0), &player.moveSpeed, sizeof(player.moveSpeed), NULL);
 }
+
 void Cheat::print()
 {
 	std::cout << g._copyright << std::endl;
 	//debugLog();
 }
+
 Cheat::~Cheat()
 {
 

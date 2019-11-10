@@ -6,7 +6,7 @@
 
 void MinerBot::run()
 {
-		setVerticalCameraValue(MIDDLE_VERTICAL_CAMERA_POSITION);
+		//setVerticalCameraValue(MIDDLE_VERTICAL_CAMERA_POSITION);
 
 		if (Math::dist(player.posX, player.posY, player.posZ, X, Y, Z))
 		{
@@ -71,7 +71,6 @@ MinerBot::MinerBot() : Cheat()
 		//system("cls");
 	}
 }
-
 
 MinerBot::~MinerBot()
 {
