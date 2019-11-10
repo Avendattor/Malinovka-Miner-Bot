@@ -31,6 +31,15 @@ void MinerBot::run()
 
 			if (player.moveSpeed == 0)
 			{
+				DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
+				HKL currentLayout = GetKeyboardLayout(threadID);
+				unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;
+				std::cout << x << std::endl;
+
+				if ((int)x == 419u)
+				{
+					PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, 2, 0);
+				}
 				sendKey(static_cast<char>('w'));
 				sendKey(static_cast<UINT>(VK_SPACE));
 			}
