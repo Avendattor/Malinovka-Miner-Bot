@@ -27,8 +27,8 @@ public:
 	void render();
 	void print();
 
-	void sendKey(char key);
-	void sendKey(UINT ch);
+	void sendKey(char ch, bool withKeyUp);
+	void sendKey(UINT ch, bool withKeyUp);
 	void debugLog();
 
 	inline void setVerticalCameraValue(float v) { WriteProcessMemory(hProcess, (LPVOID)(clientBase + 0x76F248), &v, sizeof(v), NULL); };

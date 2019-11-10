@@ -31,8 +31,8 @@ void MinerBot::run()
 
 			if (player.moveSpeed == 0)
 			{
-				sendKey(static_cast<char>('w'));
- 				sendKey(static_cast<UINT>(VK_SPACE));
+				sendKey(static_cast<char>('w'), false);
+ 				sendKey(static_cast<UINT>(VK_SPACE), false);
 			}
 
 			if (status == 0)
@@ -41,6 +41,8 @@ void MinerBot::run()
 				if (Math::dist(X, Y, Z, player.posX, player.posY, player.posZ) <= 1.5)
 				{
 					status = 1;
+					sendKey(static_cast<char>('w'), true);
+					Sleep(10000);
 				}
 			}
 			else if (status == 1)
@@ -58,17 +60,11 @@ void MinerBot::run()
 MinerBot::MinerBot() : Cheat()
 {
 	print();
-	DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
-	HKL currentLayout = GetKeyboardLayout(threadID);
-	unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;
-
 	LoadKeyboardLayoutA("0x0409", KLF_ACTIVATE | KLF_SETFORPROCESS);
 
 	while (true)
 	{
 		render();
-
-
 
 		run();
 		Sleep(50);

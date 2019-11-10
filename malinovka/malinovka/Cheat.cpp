@@ -5,7 +5,7 @@
 Global g;
 INPUT key;
 
-void Cheat::sendKey(UINT ch)
+void Cheat::sendKey(UINT ch, bool withKeyUp = false)
 {
 	memset(&key, 0, sizeof(INPUT));//Zero the structure.
 	key.type = INPUT_KEYBOARD;
@@ -17,14 +17,18 @@ void Cheat::sendKey(UINT ch)
 										//Ready to send the key-down event.
 	SendInput(1, &key, sizeof(INPUT));
 
+	if (withKeyUp == true)
+	{
+		key.ki.dwExtraInfo = GetMessageExtraInfo();
+		key.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;//Key-up need be defined too, or just use the value.
+		SendInput(1, &key, sizeof(INPUT));
+	}
 	//Sleep(1200);//Wait one second before sending key-up.
 	//Sending key-up.
-	//key.ki.dwExtraInfo = GetMessageExtraInfo();
-	//key.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;//Key-up need be defined too, or just use the value.
-	//SendInput(1, &key, sizeof(INPUT));
+;
 }
 
-void Cheat::sendKey(char ch)
+void Cheat::sendKey(char ch, bool withKeyUp = false)
 {
 	memset(&key, 0, sizeof(INPUT));//Zero the structure.
 	key.type = INPUT_KEYBOARD;
@@ -36,6 +40,12 @@ void Cheat::sendKey(char ch)
 										//Ready to send the key-down event.
 	SendInput(1, &key, sizeof(INPUT));
 
+	if (withKeyUp == true)
+	{
+		key.ki.dwExtraInfo = GetMessageExtraInfo();
+		key.ki.dwFlags = KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;//Key-up need be defined too, or just use the value.
+		SendInput(1, &key, sizeof(INPUT));
+	}
 	//Sleep(1200);//Wait one second before sending key-up.
 				//Sending key-up.
 	//key.ki.dwExtraInfo = GetMessageExtraInfo();
@@ -63,10 +73,19 @@ Cheat::Cheat()
 {
 	toAttach(windowName);
 	clientBase = dwGetModuleBaseAddress(moduleName);
-	std::cout << "Client Base is: " << std::hex << clientBase << std::endl;
+	std::cout << "BOT: You have 5 seconds to select a window the game" << std::endl;
+	//std::cout << "Client Base is: " << std::hex << clientBase << std::endl;
 	ReadProcessMemory(hProcess, (LPCVOID)(clientBase + 0x79B9BC), &baseAddress, sizeof(baseAddress), NULL);
 	std::cout << "Base Addy is: " << std::hex << baseAddress << std::endl;
 	
+	if ((baseAddress) == 0)
+	{
+		system("cls");
+		std::cout << "BOT: I can't get the base address of the game." << std::endl;
+		std::cout << "BOT: Please, reload the game" << std::endl;
+		Sleep(5000);
+		exit(-1);
+	}
 	Sleep(5000);
 	system("cls");
 }
@@ -75,7 +94,8 @@ bool Cheat::toAttach(LPCSTR process)
 	hWnd = FindWindowA(0, process);
 	if (hWnd == NULL)
 	{
-		std::cerr << "Could not find window." << std::endl;
+		std::cerr << "BOT: I can't find window of the game.." << std::endl;
+		std::cerr << "BOT: Try to open the game with administrator rights." << std::endl;
 		Sleep(5000);
 		exit(-1);
 	}
@@ -86,13 +106,14 @@ bool Cheat::toAttach(LPCSTR process)
 
 		if (pID == NULL)
 		{
-			std::cerr << "Process is not found" << std::endl;
+			std::cerr << "BOT: I can't find process of the game.." << std::endl;
+			std::cerr << "BOT: Try to open the game with administrator rights." << std::endl;
 			Sleep(5000);
 			exit(-1);
 		}
 		else
 		{
-			std::cout << "Ok!" << std::endl;
+			std::cout << "BOT: All right!" << std::endl;
 			return true;
 		}
 	}
