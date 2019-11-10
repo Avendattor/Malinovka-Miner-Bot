@@ -31,16 +31,8 @@ void MinerBot::run()
 
 			if (player.moveSpeed == 0)
 			{
-				DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
-				HKL currentLayout = GetKeyboardLayout(threadID);
-				unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;
-
-				if ((int)x == 419u)
-				{
-					PostMessage(GetForegroundWindow(), WM_INPUTLANGCHANGEREQUEST, 2, 0);
-				}
 				sendKey(static_cast<char>('w'));
-				sendKey(static_cast<UINT>(VK_SPACE));
+ 				sendKey(static_cast<UINT>(VK_SPACE));
 			}
 
 			if (status == 0)
@@ -69,10 +61,15 @@ MinerBot::MinerBot() : Cheat()
 
 	while (true)
 	{
-		run();
 		render();
-		//print();
 
+		DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
+		HKL currentLayout = GetKeyboardLayout(threadID);
+		unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;  
+
+		LoadKeyboardLayoutA("0x0409", KLF_ACTIVATE | KLF_SETFORPROCESS);
+
+		run();
 		Sleep(50); // Скорость обновления данных. Чем меньше число, тем чаще происходит обновление, тем больше ресурсов компьютера затрачивается.
 		//system("cls"); // Обновление консольного окна (лучше всего использовать в случае отладки в процессе вывода данных чита в консоль
 	}
