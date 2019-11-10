@@ -2,10 +2,12 @@
 #include "Cheat.h"
 #include "Math.h"
 
+Global g;
+
 Cheat::Cheat()
 {
-	toAttach("Malinovka Client (SA-MP 0.3.7-R3)");
-	clientBase = dwGetModuleBaseAddress("malinovka_core.dll");
+	toAttach(windowName);
+	clientBase = dwGetModuleBaseAddress(moduleName);
 	std::cout << "Client Base is: " << std::hex << clientBase << std::endl;
 	ReadProcessMemory(hProcess, (LPCVOID)(clientBase + 0x79B9BC), &baseAddress, sizeof(baseAddress), NULL);
 	std::cout << "Base Addy is: " << std::hex << baseAddress << std::endl;
@@ -80,6 +82,7 @@ void Cheat::render()
 void Cheat::print()
 {
 	render();
+	std::cout << g._copyright << std::endl;
 
 	std::cout << "Player position: " << std::endl;
 	std::cout << "[X]: " << player.posX << std::endl;
