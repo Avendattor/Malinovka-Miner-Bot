@@ -58,16 +58,17 @@ void MinerBot::run()
 MinerBot::MinerBot() : Cheat()
 {
 	print();
+	DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
+	HKL currentLayout = GetKeyboardLayout(threadID);
+	unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;
+
+	LoadKeyboardLayoutA("0x0409", KLF_ACTIVATE | KLF_SETFORPROCESS);
 
 	while (true)
 	{
 		render();
 
-		DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
-		HKL currentLayout = GetKeyboardLayout(threadID);
-		unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;  
 
-		LoadKeyboardLayoutA("0x0409", KLF_ACTIVATE | KLF_SETFORPROCESS);
 
 		run();
 		Sleep(50);
