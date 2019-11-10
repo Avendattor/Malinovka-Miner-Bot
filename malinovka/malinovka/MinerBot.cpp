@@ -34,7 +34,6 @@ void MinerBot::run()
 				DWORD threadID = GetWindowThreadProcessId(hWnd, NULL);
 				HKL currentLayout = GetKeyboardLayout(threadID);
 				unsigned int x = (unsigned int)currentLayout & 0x0000FFFF;
-				std::cout << x << std::endl;
 
 				if ((int)x == 419u)
 				{
