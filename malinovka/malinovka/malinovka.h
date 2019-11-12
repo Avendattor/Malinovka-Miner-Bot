@@ -12,4 +12,5 @@
 struct Global
 {
 	const char *_copyright = "Malinovka Miner Bot by liefasm | Telegram: @L1eF4Sm";
+	const char *_update = "Update date: 10.11.2019";
 };
