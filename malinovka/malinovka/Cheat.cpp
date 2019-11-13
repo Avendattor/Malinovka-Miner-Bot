@@ -160,6 +160,7 @@ void Cheat::print()
 {
 	std::cout << g._copyright << std::endl;
 	std::cout << g._update << std::endl;
+	std::cout << g._repository << std::endl;
 	//debugLog();
 }
 

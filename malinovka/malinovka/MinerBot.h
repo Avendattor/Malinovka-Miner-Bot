@@ -1,5 +1,6 @@
 #pragma once
 #include "Cheat.h"
+
 class MinerBot : public Cheat
 {
 private:
