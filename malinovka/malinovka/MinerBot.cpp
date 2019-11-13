@@ -28,6 +28,29 @@ void MinerBot::run()
 
 			float dist = Math::dist(X, Y, Z, player.posX, player.posY, player.posZ);
 
+			if (dist > 150)
+			{
+				system("cls");
+				std::cout << "BOT: You are not in the mine." << std::endl;
+				std::cout << "BOT: The bot is disabled." << std::endl;
+
+				sendKey(static_cast<char>('w'), true); // stop moving
+				sendKey(static_cast<UINT>(VK_SPACE), true);
+				system("pause");
+				exit(-1);
+			}
+
+			if (player.posZ > 1003.5f)
+			{
+				system("cls");
+				std::cout << "BOT: Admin slapped you" << std::endl;
+				std::cout << "BOT: The bot is disabled." << std::endl;
+
+				sendKey(static_cast<char>('w'), true); // stop moving
+				sendKey(static_cast<UINT>(VK_SPACE), true);
+				system("pause");
+				exit(-1);
+			}
 
 			if (player.moveSpeed == 0)
 			{
@@ -65,7 +88,6 @@ MinerBot::MinerBot() : Cheat()
 	while (true)
 	{
 		render();
-
 		run();
 		Sleep(50);
 		//system("cls");
