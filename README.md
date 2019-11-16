@@ -10,7 +10,7 @@
 * <a href="https://pawno-info.ru/threads/321305-%D0%98%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B1%D0%BE%D1%82%D0%B0-%D1%88%D0%B0%D1%85%D1%82%D1%91%D1%80%D0%B0-%D0%B4%D0%BB%D1%8F-Malinovka-RolePlay">Pawno-Info</a>
 * <a href="https://perfect-soft.net/threads/bot-shaxtjor-dlja-malinovka-roleplay.3831/#post-34174">PERFECT-SOFT</a>
 * <a href="https://litehack.ru/threads/bot-shaxtjor-dlja-malinovka-roleplay.17537/">LiteHack</a>
-* <a href="https://4cheat.ru/showthread.php?p=1518621#post1518621">4cheat</a>
+* <a href="https://4cheat.ru/showthread.php?p=1518621#post1518621">4cheat</a></br></br>
 <b>Требует реализации:</b>
 - Гибкость траектории движения (выбор определённого маршрута, добавление некоторых смещений движения)
 - Обход персонажей находящийся в состоянии AFK (для дальнейшего во избежания бана)
