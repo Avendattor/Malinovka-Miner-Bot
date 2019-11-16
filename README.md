@@ -11,6 +11,8 @@
 - <a href="https://perfect-soft.net/threads/bot-shaxtjor-dlja-malinovka-roleplay.3831/#post-34174">PERFECT-SOFT</a>
 - <a href="https://litehack.ru/threads/bot-shaxtjor-dlja-malinovka-roleplay.17537/">LiteHack</a>
 - <a href="https://4cheat.ru/showthread.php?p=1518621#post1518621">4cheat</a></br>
+
+
 <b>Требует реализации:</b>
 - Гибкость траектории движения (выбор определённого маршрута, добавление некоторых смещений движения)
 - Обход персонажей находящийся в состоянии AFK (для дальнейшего во избежания бана)
