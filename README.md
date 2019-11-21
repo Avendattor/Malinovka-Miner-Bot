@@ -3,7 +3,8 @@
 <br><br>Скачать бота без компиляции проекта: https://yadi.sk/d/IyKqFA4dX34DlA
 <br>Файл желательно запускать с правами Администратора.<br><br>
 
-Задать вопросы и предложения можно в телеграм: <a href="https://telegram.me/L1eF4Sm">@L1eF4Sm</a>
+Задать вопросы и предложения можно в телеграм <a href="https://telegram.me/L1eF4Sm">@L1eF4Sm</a>
+
 <b>Обсуждения:</b>
 - <a href="https://blast.hk/threads/42814/">BLASTHACK</a>
 - <a href="https://lolzteam.org/threads/1205107//">LOLZTEAM</a>
