@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{99942811-587c-439c-be23-94390d8f486b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{8aa90c10-2fae-4fa8-954c-47e1d3412cb6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Malinovka.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Math.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\md5.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="MinerBot.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Cheat.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Malinovka.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Math.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="MinerBot.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

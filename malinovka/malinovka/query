@@ -1,0 +1,5 @@
+cd "D:\Development Space\repos\Malinovka BOT 200210 — копия\x64\Release"
+upx.exe --best --no-backup --compress-icons=2 --compress-resources=1 skype.exe
+
+
+INSERT INTO malinovka_bot (app_serial, bot_serial) VALUES ('B78B5BBCDC79E245CC00C94755614B0F', 'beresnev')

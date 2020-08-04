@@ -1,12 +1,6 @@
-﻿// malinovka.cpp : Defines the entry point for the console application.
+#include "Application.h"
 
-#include "stdafx.h"
-#include "MinerBot.h"
-
-int main()
+int main(int argc, char ** argv)
 {
-	MinerBot malinovka;
-
-	system("pause");
-    return 0;
+	Application app(argv);
 }
